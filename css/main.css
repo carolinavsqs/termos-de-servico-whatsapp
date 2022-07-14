@@ -45,11 +45,6 @@ h1, h2, h2 *, h3, h4, h5, h6 {
     background: var(--secondary-accent);
     color: var(--body-bg);
 }
-
-strong {
-    color: var(--primary-accent);
-}
-
 .nav-item a {
     color: var(--body-color);
     font-weight: 400;
@@ -87,8 +82,7 @@ a.navbar-brand:focus {
 }
 
 main a {
-    color: var(--body-color);
-    font-weight: 600;
+    color: var(--primary-accent);
     text-decoration: underline;
 }
 

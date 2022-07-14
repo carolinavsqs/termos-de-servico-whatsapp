@@ -1,3 +1,7 @@
+.back-arrow {
+    font-size: 1.5rem;
+}
+
 .toolbar {
     background-color: var(--body-bg-two);
     border-top: 1px solid var(--body-bg-three);
