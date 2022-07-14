@@ -1,0 +1,253 @@
+:root {
+    --body-bg: #FFFFFF;
+    --body-bg-two: #FCFCFC;
+    --body-bg-three: #EAEAEA;
+    --button-bg: #212232;
+    --footer-bg: #28293D;
+    --body-color: #212232;
+    --body-color-two: #FCFCFC;
+    --body-color-three: #EAEAEA;
+    --button-color: #FFFFFF;
+    --footer-color: #EAEAEA;
+    --svg-filter: invert(10%) sepia(29%) saturate(794%) hue-rotate(197deg) brightness(91%) contrast(90%);
+    /* Altere as cores do bloco abaixo para combinar com a identidade visual do seu site */
+    --primary-accent: #128C7E;
+    --secondary-accent: #0D8CA3;
+    --secondary-accent-light: #0D8CA30a;
+    --main-outline: rgba(13, 140, 163, 1);
+    --side-outline: rgba(18, 140, 126, 1);
+    /* ------- */
+}
+
+.dark-mode:root {
+    --body-bg: #212232;
+    --body-bg-two: #28293D;
+    --body-bg-three: #393A57;
+    --body-color: #FFFFFF;
+    --svg-filter: invert(99%) sepia(6%) saturate(1%) hue-rotate(3deg) brightness(105%) contrast(100%);
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+}
+
+h1, h2, h2 *, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+::selection {
+    background: var(--secondary-accent);
+    color: var(--body-bg);
+}
+
+strong {
+    color: var(--primary-accent);
+}
+
+.nav-item a {
+    color: var(--body-color);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: var(--secondary-accent);
+    text-decoration: underline;
+    transition: all 0.2s linear;
+}
+
+.nav-item a:focus {
+    color: var(--secondary-accent);
+    text-decoration: underline;
+    outline: none;
+}
+
+.nav-item a:focus-visible {
+    outline: 2px solid var(--main-outline);
+}
+
+.nav-item a.active {
+    color: var(--body-color) !important;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+a.navbar-brand:focus {
+    outline: none;
+}
+
+a.navbar-brand:focus {
+    outline: 2px solid var(--main-outline);
+}
+
+main a {
+    color: var(--body-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+main a:hover {
+    color: var(--secondary-accent);
+    transition: all 0.2s linear;
+}
+
+main a:focus {
+    color: var(--secondary-accent);
+    outline: none;
+}
+
+main a:focus-visible {
+    outline: 2px solid var(--main-outline);
+}
+
+#main-content:focus {
+    outline: none;
+}
+
+#main-content:focus-visible {
+    outline: 2px solid var(--main-outline);
+}
+
+footer a {
+    color: var(--secondary-accent);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--primary-accent);
+    transition: all 0.2s linear;
+}
+
+footer a:focus {
+    color: var(--primary-accent);
+    outline: none;
+}
+
+footer a:focus-visible {
+    outline: 2px solid var(--side-outline);
+}
+
+a.skip-content {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-content:focus, a.skip-content:active {
+    width: 100%;
+    color: var(--body-color-two);
+    background-color: var(--primary-accent);
+    text-align: center;
+    text-decoration: underline;
+    left: auto;
+    top: auto;
+    height: auto;
+    overflow: auto;
+    text-align: center;
+    z-index: 999;
+    outline: 2px solid var(--main-outline);
+}
+
+.offcanvas {
+    background-color: var(--body-bg);
+}
+
+.navbar {
+    font-size: 1rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon, .accordion-button::after, .btn-close {
+    filter: var(--svg-filter);
+}
+
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus, button:focus {
+    box-shadow: none !important;
+    outline: none;
+}
+
+.navbar-toggler:focus-visible, .navbar-toggler-icon:focus-visible, button:focus-visible {
+    box-shadow: 0 0 0 0.25rem var(--main-outline) !important;
+    outline: 2px solid var(--main-outline);
+}
+
+.navbar-brand {
+    color: var(--body-color);
+}
+
+.navbar-brand img {
+    max-width: 120px;
+}
+
+button.btn-primary {
+    color: var(--button-color);
+    background-color: var(--button-bg);
+    border-color: var(--body-color);
+    border-width: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: .5rem 1.5rem;
+}
+
+button.btn-primary:hover, button.btn-primary:focus {
+    color: var(--button-bg);
+    background-color: var(--button-color);
+    border-color: var(--button-bg);
+    transition: all 0.2s linear;
+}
+
+i.gradient-icon {
+    background:-moz-linear-gradient(left, var(--primary-accent) 0%, var(--secondary-accent) 100%); 
+    background: -webkit-linear-gradient(left, var(--primary-accent) 0%, var(--secondary-accent) 100%); 
+    background: linear-gradient(to right, var(--primary-accent) 0%, var(--secondary-accent) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+}
+
+i.solid-icon {
+    color: var(--primary-accent);
+}
+
+nav button i {
+    font-size: 1.2rem;
+}
+
+.form-control {
+    background-color: var(--body-bg);
+    border: 1px solid var(--body-bg-three);
+    transition: none !important;
+}
+
+.form-control:hover {
+    border: 1px solid var(--primary-accent);
+    transition: all 0.5 linear;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-accent);
+    box-shadow: 0 0 0 0.2rem var(--main-outline);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
+    font-size: 0.9rem;
+    text-align: center;
+}
